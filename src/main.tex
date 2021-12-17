@@ -1,0 +1,90 @@
+% !TeX root = main.tex
+
+\includeonly{
+    front-matter/front-matter.tex,
+    main-matter/introduction/chap_intro.tex,                % introduction
+    main-matter/lit-review-1/chap_lr1.tex,                  % first lit review
+    main-matter/lit-review-x/chap_lrx.tex,                  % xth lit review
+    main-matter/hypothesis/chap_hypo.tex,                   % hypothesis
+    main-matter/experiment/chap_exper.tex,                  % experiment
+    main-matter/analysis-and-discussion/chap_a-and-d.tex,   % analysis and discussion
+    main-matter/conclusions/chap_conc.tex,                  % conclusions
+    appendices/appendices.tex,
+    back-matter/back-matter.tex
+}
+
+%%% PREAMBLE
+\documentclass[11pt,titlepage,oneside]{book}
+\input{preamble/preamble.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%% DOCUMENT %%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+    %%%%%%%%%%%%%%%%% FRONT MATTER %%%%%%%%%%%%%%%%%
+
+    \setlength{\parindent}{0pt} % set paragraph indent
+    \setlength{\parskip}{0ex} % set paragraph spacing
+    \pagenumbering{alph} % prevents warnings about duplicated page numbering
+
+    % Set autoref names
+    \renewcommand{\equationautorefname}{Equation}
+    \renewcommand{\figureautorefname}{Figure}
+    \renewcommand{\Itemautorefname}{Item}
+    \renewcommand{\tableautorefname}{Table}
+    \renewcommand{\sectionautorefname}{Section}
+    \renewcommand{\subsectionautorefname}{Section}
+    \renewcommand{\subsubsectionautorefname}{Section}
+    \renewcommand{\chapterautorefname}{Chapter}
+    \renewcommand{\partautorefname}{Part}
+
+    \include{front-matter/front-matter.tex}
+
+    %%%%%%%%%%%%%%%%% MAIN MATTER %%%%%%%%%%%%%%%%%
+    \mainmatter
+
+    % change header
+    \renewcommand{\chaptermark}[1]{\markboth{\chaptertitlename\ \thechapter: #1}{}}
+
+    \pagenumbering{arabic}
+    \setlength\abovedisplayshortskip{0.5\baselineskip}
+    \setlength\belowdisplayshortskip{0.5\baselineskip}
+    \setlength\abovedisplayskip{0.5\baselineskip}
+    \setlength\belowdisplayskip{0.5\baselineskip}
+
+    %%%%%%%%%%%%%%%%%%%%%
+
+    % Introduction
+    \include{main-matter/introduction/chap_intro.tex}
+
+    % Literature review chapters
+    \include{main-matter/lit-review-1/chap_lr1.tex}
+    \include{main-matter/lit-review-x/chap_lrx.tex}
+
+    % Hypothesis
+    \include{main-matter/hypothesis/chap_hypo.tex}
+
+    % Experiment
+    \include{main-matter/experiment/chap_exper.tex}
+
+    % Analysis and discussion
+    \include{main-matter/analysis-and-discussion/chap_a-and-d.tex}
+
+    % Conclusions
+    \include{main-matter/conclusions/chap_conc.tex}
+
+
+    %%%%%%%%%%%%%%%%% BACK MATTER %%%%%%%%%%%%%%%%%
+    %% Appendices 
+    \include{appendices/appendices.tex}
+
+    \backmatter
+
+    % header
+    \renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+
+    \include{back-matter/back-matter.tex}
+
+\end{document}

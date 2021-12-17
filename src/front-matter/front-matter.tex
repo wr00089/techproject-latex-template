@@ -1,0 +1,49 @@
+% !TEX root = ../main.tex
+
+\graphicspath{{front-matter/resources/}}
+
+%%%%%%%%%%%%%%%%% TITLE PAGE %%%%%%%%%%%%%%%%%
+\pdfbookmark[0]{Title page}{title} % Sets a PDF bookmark for the title page
+\input{front-matter/sections/title-page.tex}
+
+
+\setlength{\parskip}{1ex plus 0.2ex minus 0.2ex} % set paragraph spacing
+\onehalfspacing
+
+%%%%%%%%%%%%%%%%% ABSTRACT %%%%%%%%%%%%%%%%%
+\pdfbookmark[0]{Abstract}{abstract}
+\input{front-matter/sections/abstract.tex}
+
+%%%%%%%%%%%%%%%%% ACTUAL FRONT MATTER %%%%%%%%%%%%%%%%%
+\frontmatter
+
+\setlength{\parskip}{1ex plus 0.2ex minus 0.2ex} % set paragraph spacing
+
+\onehalfspacing
+
+% Acknowledgements
+\input{front-matter/sections/acknowledgements.tex}
+
+\singlespacing
+
+\setlength{\parskip}{0ex} % set paragraph spacing
+
+\clearpage
+\pdfbookmark[0]{Contents}{Contents}
+\phantomsection
+\tableofcontents
+\clearpage
+\phantomsection
+% \addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+\clearpage
+\phantomsection
+% \addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
+
+\setlength{\parskip}{1ex plus 0.2ex minus 0.2ex} % set paragraph spacing
+
+\onehalfspacing
+
+% Glossary
+\input{front-matter/sections/glossary.tex}

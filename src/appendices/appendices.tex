@@ -1,0 +1,11 @@
+% !TEX root = ../main.tex
+
+%% Appendices
+\graphicspath{{appendices/resources/}}
+
+\appendix
+% Replace "Chapter" with "Appendix"
+\addtocontents{toc}{\protect\renewcommand{\protect\cftchappresnum}{\appendixname~}}
+\addtocontents{toc}{\protect\addtolength{\cftchapnumwidth}{1em}}
+
+\input{appendices/sections/app_a.tex}
