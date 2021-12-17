@@ -48,6 +48,7 @@ Content can be added to the main matter chapters by editing the chap_\*.tex file
 Chapters are added to the main file using the `\include` command, which reads the content of the chapter file almost as if it were copy and pasted into main.tex.
 This makes it easier to find things, keeps files to a manageable size, and allows main.tex to be used for organisation and structure.
 The `\includeonly` command at the top of main.tex allows you to show and hide chapters that have an `\include` command in the document.
+
 Comment out (`%`) the line that corresponds to the chapter you want to hide.
 This will stop it rendering that chapter to the output pdf, which will save build time when you are working on another chapter.
 Doing this in `\includeonly` rather than the `\include` line means that latex will still read the chapter aux files to keep stuff like cross referencing intact.
@@ -72,6 +73,7 @@ If in doubt, look at the format of an existing chapter.
 
 #### Dividing into smaller files
 The main-matter/analysis-and-discussions/ directory shows how you could divide a chapter into smaller files, for the same reasons we are dividing the document into chapters - more manageable files, easier to find things, simpler structuring and reorganising.
+
 The chapter is divided into an Analysis section and a Discussion section.
 There is a .tex file for each of these in the sections/ subdirectory.
 In chap_a-and-d.tex, these section files are called using the `\input` command.
@@ -87,7 +89,7 @@ Equally, you can just write the whole chapter in the chap_\*.tex file.
 #### Images
 Each chapter directory (and appendices/ and front-matter/) has a resources/ subdirectory, which should contain any images and stuff used by the chapter.
 Each chap_\*.tex file has a `\graphicspath` command at the top, which specifies the path to its resources/ directory, relative to main.tex.
-Any `\includegraphics` commands in the chap_\*.tex file (or any files it \inputs) only need to reference the image file's name, not its path.
+Any `\includegraphics` commands in the chap_\*.tex file (or any files it `\input`s) only need to reference the image file's name, not its path.
 
 ### Front matter and appendices
 front-matter/ and appendices/ are used like chapter directories.
