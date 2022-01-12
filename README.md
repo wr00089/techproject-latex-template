@@ -4,6 +4,20 @@ Latex template for the [IoSR Technical Project / Dissertation structure](https:/
 Based on the IoSR [Example LaTeX template](https://iosr.uk/members/modules/4B_TechProj/TechProjectTemplateLateX.zip).
 README assumes some latex knowledge and experience.
 
+- [Contents](#contents)
+- [Usage](#usage)
+    * [Download / Build](#download---build)
+    * [Customise](#customise)
+    * [Main matter](#main-matter)
+        + [Showing / hiding chapters](#showing---hiding-chapters)
+        + [Adding a chapter](#adding-a-chapter)
+        + [Dividing into smaller files](#dividing-into-smaller-files)
+        + [Images](#images)
+    * [Front matter and appendices](#front-matter-and-appendices)
+    * [References](#references)
+    * [Preamble](#preamble)
+
+
 ## Contents
 The src/ directory contains the latex code.
 main.tex is the root file.
@@ -87,7 +101,7 @@ Or it could be used to input big blocks of maths code without disrupting the tex
 Equally, you can just write the whole chapter in the chap_\*.tex file.
 
 #### Images
-Each chapter directory (and appendices/ and front-matter/) has a resources/ subdirectory, which should contain any images and stuff used by the chapter.
+Each chapter directory (and appendices/ and front-matter/) should have a resources/ subdirectory, which will contain any images and stuff used by the chapter.
 Each chap_\*.tex file has a `\graphicspath` command at the top, which specifies the path to its resources/ directory, relative to main.tex.
 Any `\includegraphics` commands in the chap_\*.tex file (or any files it `\input`s) only need to reference the image file's name, not its path.
 
