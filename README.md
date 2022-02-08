@@ -6,10 +6,10 @@ README assumes some latex knowledge and experience.
 
 - [Contents](#contents)
 - [Usage](#usage)
-    * [Download / Build](#download---build)
+    * [Download and Build](#download-and-build)
     * [Customise](#customise)
     * [Main matter](#main-matter)
-        + [Showing / hiding chapters](#showing---hiding-chapters)
+        + [Showing and hiding chapters](#showing-and-hiding-chapters)
         + [Adding a chapter](#adding-a-chapter)
         + [Dividing into smaller files](#dividing-into-smaller-files)
         + [Images](#images)
@@ -45,7 +45,7 @@ references.bib is the bibtex file.
 iosrodw.bst is a bibliography style file based on [iosrnew.bst](https://iosr.uk/members/wiki/uploads/Coursework/iosrnew.bst.zip) with slight changes for conference papers.
 
 ## Usage
-### Download / Build
+### Download and Build
 1. Open the 'Code' menu in the top right corner and select 'Download ZIP'.
 1. Unzip the zip, then open main.tex in your favourite latex tool.
     I use the latex plugin in VSCode for easier git integration and autobuild.
@@ -58,7 +58,7 @@ iosrodw.bst is a bibliography style file based on [iosrnew.bst](https://iosr.uk/
 ### Main matter
 Content can be added to the main matter chapters by editing the chap_\*.tex file in one of the chapter directories.
 
-#### Showing / hiding chapters
+#### Showing and hiding chapters
 Chapters are added to the main file using the `\include` command, which reads the content of the chapter file almost as if it were copy and pasted into main.tex.
 This makes it easier to find things, keeps files to a manageable size, and allows main.tex to be used for organisation and structure.
 The `\includeonly` command at the top of main.tex allows you to show and hide chapters that have an `\include` command in the document.
@@ -128,6 +128,7 @@ This means that if you need to change or add any references later, you won't nee
 
 ### Preamble
 The only thing you'll need to change in preamble/preamble.tex is the title and author under `Thesis details`.
+This is where you will add any extra packages if you need them.
 
 There are a few things defined in the preamble that can be used anywhere in the document, which weren't really documented in the original template.
 
